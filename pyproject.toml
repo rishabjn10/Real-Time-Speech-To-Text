@@ -1,0 +1,20 @@
+[project]
+name = "conversational-assist"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Rishabh Jain - Closeloop Technologies", email = "rishabh.jain@closeloop.com"},
+]
+dependencies = [
+    "faster-whisper>=1.1.0",
+    "pyaudio>=0.2.14",
+    "numpy>=2.2.1",
+    "json5>=0.10.0",
+]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
