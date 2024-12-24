@@ -9,6 +9,8 @@ dependencies = [
     "pyaudio>=0.2.14",
     "faster-whisper>=1.1.0",
     "openai>=1.58.1",
+    "python-dotenv>=1.0.1",
+    "pydantic>=2.10.4",
 ]
 requires-python = "==3.11.*"
 readme = "README.md"
