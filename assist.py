@@ -1,12 +1,11 @@
 import json
-import numpy as np
 import pyaudio
 import wave
 from faster_whisper import WhisperModel
 
 # Initialize Whisper model (optimized version)
 model_size = "base.en"
-model = WhisperModel(model_size, compute_type="int8", device="cpu")
+model = WhisperModel(model_size, compute_type="int8", device="cuda")
 
 # Audio recording settings
 FORMAT = pyaudio.paInt16
@@ -87,11 +86,11 @@ def fill_chart_data(transcribed_text):
         }
 
         chart_data["periodontal_chart"].append(chart_entry)
-        print(f"Updated Chart: {chart_entry}")
 
     # Save JSON dynamically
     with open("chart_data.json", "w") as f:
         json.dump(chart_data, f, indent=4)
+        print(f"Updated Chart: {chart_entry}")
 
 
 if __name__ == "__main__":
